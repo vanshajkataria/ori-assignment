@@ -53,20 +53,21 @@ http://localhost:3000
 ```
 npmjs-clone/
 │
-├── pages/                  # Main routing files
-│   ├── index.tsx           # Home page with search bar
+├── app/                    # Main routing files
+│   ├── index.tsx           # Contains Home Page Info
+│   ├── layout.tsx          # Containe the Metadata along with Navbar and Footer
+│   ├── globals.css         # Global and Tailwind CSS
 │   ├── packages/           # Dynamic route for package details
 │       ├── [packageName]/  # Individual package details
 │           └── page.tsx    # Page for displaying npm package details
 │
 ├── components/             # Reusable components
-│   ├── SearchBar.tsx       # Search bar for finding npm packages
+│   ├── navbar.tsx          # Navbar Component
+│   ├── footer.tsx          # Footer Component
+│   ├── homeSections        # Contains section of homepage
+│       ├── main.tsx        # Main section of homepage
+│       ├── info.tsx        # Info section of homepage
 │   └── PackageDetails.tsx  # Package details page component
-│
-├── public/                 # Static assets
-│
-├── styles/                 # Global and Tailwind CSS
-│   └── globals.css
 │
 └── package.json            # Dependencies and scripts
 ```
