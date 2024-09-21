@@ -12,7 +12,7 @@ app.prepare().then(() => {
   const server = express();
 
   // Custom route example
-  server.get('/custom-route', (req, res) => {
+  server.get('/testRoute', (req, res) => {
     return res.send('Hello from custom route!');
   });
 

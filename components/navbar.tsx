@@ -130,7 +130,7 @@ const Navbar: React.FC = () => {
                 <ul className="absolute top-full bg-white w-full p-2 max-h-64 overflow-y-auto border border-gray-300">
                   {searchResults.map((pkg, index) => (
                     <li key={index} className="p-2 hover:bg-gray-100">
-                      <Link href={`/packages/${pkg.name}`}>
+                      <Link href={`/package/${pkg.name}`}>
                           <strong>{pkg.name}</strong> - {pkg.description}
                       </Link>
                     </li>
