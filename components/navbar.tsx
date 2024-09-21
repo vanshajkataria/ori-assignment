@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-'use client'
+"use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
@@ -125,15 +125,19 @@ const Navbar: React.FC = () => {
                   Search
                 </button>
               </form>
-              {loading && <div className="absolute top-full bg-white w-full p-2">Loading...</div>}
+              {loading && (
+                <div className="absolute top-full bg-white w-full p-2">
+                  Loading...
+                </div>
+              )}
               {!loading && searchResults.length > 0 && (
-                <ul className="absolute top-full bg-white w-full p-2 max-h-64 overflow-y-auto border border-gray-300">
+                <ul className="absolute top-full bg-white w-full p-2 max-h-64 overflow-y-auto border border-gray-300 z-10">
                   {searchResults.map((pkg, index) => (
-                    <li key={index} className="p-2 hover:bg-gray-100">
-                      <Link href={`/package/${pkg.name}`}>
-                          <strong>{pkg.name}</strong> - {pkg.description}
-                      </Link>
-                    </li>
+                    <Link key={index} href={`/package/${pkg.name}`}>
+                      <li className="p-2 hover:bg-gray-100">
+                        <strong>{pkg.name}</strong> - {pkg.description}
+                      </li>
+                    </Link>
                   ))}
                 </ul>
               )}
